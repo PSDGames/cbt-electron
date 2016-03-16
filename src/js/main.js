@@ -11,7 +11,7 @@ const app = remote.app;
 
 const fs = require('fs');
 const path = require('path');
-const dots = require('dot').process({path: './views'});
+const dots = require('dot').process({path: './src/views'});
 
 const RECENT_DIRECTORY_KEY = '662589eb-a07c-42eb-bac2-ddd9f75f7fc9';
 const RECENT_WORKSPACE_KEY = 'dae30f50-b34c-4e4c-83e6-fe0eeb2ded50';
