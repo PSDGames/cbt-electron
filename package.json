@@ -1,0 +1,16 @@
+{
+  "name": "cbt-electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mongolrgata",
+  "license": "MIT",
+  "dependencies": {
+    "dot": "^1.0.3",
+    "iconv-lite": "^0.4.13",
+    "mkdirp": "^0.5.1"
+  }
+}

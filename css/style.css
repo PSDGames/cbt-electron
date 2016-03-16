@@ -1,0 +1,65 @@
+.full {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button-open-directory, #button-set-workspace {
+    border: 2px solid #5585ff;
+    border-radius: 8px;
+    padding: 32px;
+    color: #5585ff;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#button-open-directory:hover, #button-set-workspace:hover {
+    background-color: #5585ff;
+    color: white;
+}
+
+.arcfile {
+    font-family: monospace;
+    cursor: pointer;
+}
+
+.arcfile:hover {
+    background-color: paleturquoise;
+}
+
+.hover-dialog {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    z-index: 100500;
+    bottom: 16px;
+    border: 1px solid black;
+    visibility: hidden;
+    background-color: white;
+}
+
+#workspace {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    width: 37.89%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.fork-folder {
+    font-family: monospace;
+    font-size: 24px;
+}
