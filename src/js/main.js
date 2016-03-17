@@ -17,6 +17,7 @@ const RECENT_DIRECTORY_KEY = '662589eb-a07c-42eb-bac2-ddd9f75f7fc9';
 const RECENT_WORKSPACE_KEY = 'dae30f50-b34c-4e4c-83e6-fe0eeb2ded50';
 
 var dearcer = require('./js/modules/arcfile.module').dearcer;
+var FileDragDrop = require('./js/modules/arcfile.module').dearcer;
 
 /**
  * @param {string} elementID
