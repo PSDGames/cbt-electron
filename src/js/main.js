@@ -69,7 +69,14 @@ document.addEventListener('DOMContentLoaded', function () {
     let dropZone = document.getElementsByClassName('dropZone')[0];
     let dragdrop = new FileDragDrop(dropZone);
     dragdrop.subscribe('drop', function (e, file) {
-        console.log('DO SMTHNG');    
+        let p = file.path;
+
+        let dir = p.split(path.sep);
+        dir.pop();
+        dir = dir.join(path.sep);
+
+        dearcer(p, dir);
+        //setDirectory(path.join(dir, path.basename(p).split('.')[0]));
     });
 
     dropZone.addEventListener('click', function () {
@@ -107,6 +114,7 @@ var setDirectory = function setDirectory(pathName) {
 
     for (i = 0, n = arcfiles.length; i < n; ++i) {
         arcfiles[i].addEventListener('click', function () {
+            console.log(path.join(pathName, this.textContent), localStorage.getItem(RECENT_WORKSPACE_KEY))
             dearcer(path.join(pathName, this.textContent), localStorage.getItem(RECENT_WORKSPACE_KEY));
         });
     }
