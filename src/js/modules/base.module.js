@@ -4,7 +4,6 @@
 
 'use strict';
 
-
 class Base {
     constructor () {
         this._events = {};
@@ -52,6 +51,6 @@ class Base {
 
         this._events[event].push(func);
     }
-};
+}
 
 module.exports = Base;
