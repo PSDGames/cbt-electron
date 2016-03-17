@@ -17,7 +17,7 @@ const RECENT_DIRECTORY_KEY = '662589eb-a07c-42eb-bac2-ddd9f75f7fc9';
 const RECENT_WORKSPACE_KEY = 'dae30f50-b34c-4e4c-83e6-fe0eeb2ded50';
 
 var dearcer = require('./js/modules/arcfile.module').dearcer;
-var FileDragDrop = require('./js/modules/arcfile.module').dearcer;
+var FileDragDrop = require('./js/modules/dragdrop.module');
 
 /**
  * @param {string} elementID
@@ -60,11 +60,21 @@ var clearView = function clearView(viewName) {
 document.addEventListener('DOMContentLoaded', function () {
     var recentDirectory = localStorage.getItem(RECENT_DIRECTORY_KEY);
 
-    if (recentDirectory) {
-        setDirectory(recentDirectory);
-    } else {
-        switchView('directory-request');
-    }
+    //if (recentDirectory) {
+    //    setDirectory(recentDirectory);
+    //} else {
+    switchView('directory-request');
+    //}
+
+    let dropZone = document.getElementsByClassName('dropZone')[0];
+    let dragdrop = new FileDragDrop(dropZone);
+    dragdrop.subscribe('drop', function (e, file) {
+        console.log('DO SMTHNG');    
+    });
+
+    dropZone.addEventListener('click', function () {
+        openDirectory()
+    })
 });
 
 /**
