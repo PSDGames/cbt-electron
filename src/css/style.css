@@ -98,3 +98,9 @@
     background: #afa;
     border-color: #0f0;
 }
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
